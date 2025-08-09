@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TakEaPeaK</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+    
+</head>
+ <body>
+  <!-- Intro Screen -->
+  <div class="intro" id="intro">
+    <div class="bg-noise"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- Monogram -->
+    <div class="monogram-wrap" id="monoWrap" aria-hidden="true">
+      <svg class="monogram" viewBox="0 0 180 180" width="140" height="140" role="img" aria-label="S monogram">
+        <defs>
+          <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#9C7BFF"/>
+            <stop offset="100%" stop-color="#FF6FB1"/>
+          </linearGradient>
+          <radialGradient id="g2" cx="50%" cy="50%" r="60%">
+            <stop offset="0%" stop-color="rgba(156,123,255,0.9)"/>
+            <stop offset="60%" stop-color="rgba(255,111,177,0.6)"/>
+            <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+          </radialGradient>
+          <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="6" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        <!-- soft back glow -->
+        <circle cx="90" cy="90" r="68" fill="url(#g2)" opacity="0.5"></circle>
+
+        <!-- stroke path draws first -->
+        <path id="sPath"
+          d="M130,52
+             c-8,-18 -27,-24 -43,-22
+             c-24,3 -36,18 -36,30
+             c0,16 14,23 32,27
+             c20,4 40,8 40,26
+             c0,16 -16,27 -35,29
+             c-20,2 -41,-5 -50,-25"
+          fill="none"
+          stroke="url(#g1)"
+          stroke-width="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          filter="url(#softGlow)"/>
+        <!-- fill that fades in after stroke draws -->
+        <path
+          d="M130,52
+             c-8,-18 -27,-24 -43,-22
+             c-24,3 -36,18 -36,30
+             c0,16 14,23 32,27
+             c20,4 40,8 40,26
+             c0,16 -16,27 -35,29
+             c-20,2 -41,-5 -50,-25"
+          class="sFill"/>
+      </svg>
+    </div>
+
+    <div class="intro-box" id="introBox" role="button" aria-label="Enter site">
+      <div class="box-glow"></div>
+      <div class="box-content">
+        <p class="hey">hey, this is <span class="soham">soham</span>…</p>
+        <p class="cta">click to waste 20sec of your life.</p>
+        <span class="hint">click</span>
+      </div>
+    </div>
+
+    <div class="signature">
+      <span>don't be sad coz sad spelled back is das and..."das not good"</span>
+    </div>
+
+    <!-- Transition overlay -->
+    <div class="reveal" id="reveal"></div>
+  </div>
+
+  <!-- Main Site -->
+  <header class="site-header">
+    <div class="brand">
+      <span class="logo-dot"></span>
+      <span class="brand-name">TakEaPeaK-Soham</span>
+    </div>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#blog">Blog</a>
+      <a href="#projects">Gallery</a>
+      <a href="#contact" class="btn">Contact</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="section hero">
+      <div class="hero-inner">
+        <h1 class="hero-title">
+          A Peak into <span class="accent">My Life</span> MYSELF
+        </h1>
+        <p class="hero-sub">
+          I’m Soham — just another guy.Another rolling stone.But good for me.I don't like Moss!
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn pill">Take A Peak</a>
+          <a href="#contact" class="btn link">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-blob"></div>
+        <div class="floating-card">
+          <div class="fc-line"></div>
+          <div class="fc-line w50"></div>
+          <div class="fc-line w80"></div>
+        <h1 class="hero title">
+          do contact
+       </h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section about">
+      <div class="section-head">
+        <h2>About Me</h2>
+        <p>Am just a 19yr old high school grad.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>What I do</h3>
+          <p>I passed my high school in 2024 ,and looking foreward to start bachelor studies this year{2025}.</p>
+          <ul class="tags">
+            <li>studied with Science stream ,with a speacial interest in Biology</li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <h3>What I wanna do</h3>
+          <p>being a drifter mostly a young drifter, you wanna try everything.hopefully in future I can update this section.</p>
+          <ul class="tags">
+            <li>just don't wanna regret what I choose to do</li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <h3>Did you know</h3>
+          <p>It's hard to turn the page when you know someone won't be in the next chapter.But the story must go on.</p>
+          <ul class="tags">
+            <li>coded this extra section.(mistakes mine,pleasure of quote yours,thomas wilder by the way)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="section blog">
+      <div class="section-head">
+        <h2>Updates</h2>
+        <p>My Current Informal Status.</p>
+      </div>
+      <div class="posts">
+        <article class="post-card">
+          <div class="post-tag">Dear Diary</div>
+          <h3>Will Update Soon</h3>
+          <p>Will update Soon</p>
+          <a href="#" class="read-more">Read</a>
+        </article>
+        <article class="post-card">
+          <div class="post-tag">Work Update</div>
+          <h3>Will Update Soon</h3>
+          <p>Will Update Soon.</p>
+          <a href="#" class="read-more">Read</a>
+        </article>
+        <article class="post-card">
+          <div class="post-tag">Regular Update </div>
+          <h3>Will Update soon</h3>
+          <p>Will Update soon.</p>
+          <a href="#" class="read-more">Read</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section projects">
+      <div class="section-head">
+        <h2>Gallery</h2>
+        <p>captures of life.</p>
+      </div>
+      <div class="proj-grid">
+        <a class="proj-card" href="#" aria-label="Project 1">
+          <div class="thumb"></div>
+          <div class="meta">
+            <h3>This is Soham</h3>
+            <p> Will Update Soon.</p>
+          </div>
+        </a>
+        <a class="proj-card" href="#" aria-label="Project 2">
+          <div class="thumb alt"></div>
+          <div class="meta">
+            <h3>Soham [with others]</h3>
+            <p>Will update soon.</p>
+          </div>
+        </a>
+        <a class="proj-card" href="#" aria-label="Project 3">
+          <div class="thumb"></div>
+          <div class="meta">
+            <h3>Soham[on the opposite side of camera]</h3>
+            <p>Will update soon.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <div class="contact-card">
+        <h2>Let’s Be Friends</h2>
+        <p>Open to suggestions and discussions.</p>
+        <form class="contact-form" id="contactForm">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell me about you" required></textarea>
+          </div>
+          <button type="submit" class="btn pill">Send</button>
+          <p class="form-note">This demo form does not send emails yet.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> TakEaPeaK. All rights reserved.</p>
+  &copy;  
+    Connect with me on 
+    <a href="https://x.com/SohamMa88303004" target="_blank">Twitter</a> 
+    | Follow me on 
+    <a href="https://open.spotify.com/user/ixoy2ttxu407mwyuxebo4a8k3" target="_blank">Spotify</a> 
+    to check my playlist.
+
+
+
+
+
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
